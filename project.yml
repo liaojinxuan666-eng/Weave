@@ -1,0 +1,51 @@
+
+---
+
+## project.yml（scheme 改为 weave://）
+
+```yaml
+name: Weave
+
+options:
+  bundleIdPrefix: com.liaojinxuan
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+
+packages:
+  SwiftTerm:
+    url: https://github.com/migueldeicaza/SwiftTerm
+    from: 1.2.0
+
+targets:
+  Weave:
+    type: application
+    platform: iOS
+    sources:
+      - path: Weave
+    resources:
+      - path: Weave/Resources
+    dependencies:
+      - package: SwiftTerm
+    info:
+      path: Weave/Info.plist
+      properties:
+        CFBundleDisplayName: Weave
+        CFBundleURLTypes:
+          - CFBundleURLName: com.liaojinxuan.weave
+            CFBundleURLSchemes: [weave]
+        UILaunchScreen: {}
+        UIRequiredDeviceCapabilities: [arm64]
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.liaojinxuan.weave
+        SWIFT_VERSION: 5.10
+        TARGETED_DEVICE_FAMILY: "1,2"
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_BITCODE: NO
