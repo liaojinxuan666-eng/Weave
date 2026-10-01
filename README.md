@@ -214,7 +214,7 @@ M7 QEMU TCG（可选） 💤
  
 许可证
  
-MIT 
+Apache-2.0
  
 致谢
 • SwiftTerm — 终端模拟
