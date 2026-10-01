@@ -1,9 +1,3 @@
-
----
-
-## project.yml（scheme 改为 weave://）
-
-```yaml
 name: Weave
 
 options:
