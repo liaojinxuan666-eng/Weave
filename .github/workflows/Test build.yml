@@ -32,7 +32,7 @@ jobs:
             -scheme Weave \
             -configuration Release \
             -sdk iphoneos \
-            -derivedDataPath build一个 \
+            -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
