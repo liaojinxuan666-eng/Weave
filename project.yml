@@ -16,13 +16,14 @@ targets:
     type: application
     platform: iOS
     sources:
-      - path: Weave
+      - path: App
+      - path: Surfaces
     resources:
-      - path: Weave/Resources
+      - path: Resources
     dependencies:
       - package: SwiftTerm
     info:
-      path: Weave/Info.plist
+      path: App/Info.plist
       properties:
         CFBundleDisplayName: Weave
         CFBundleURLTypes:
